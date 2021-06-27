@@ -1,0 +1,36 @@
+$colors: (
+  "primary": (
+    "light": #8995af,
+    "medium": #414c63,
+    "dark": #14213d,
+  ),
+  "accent": (
+    "medium": #fdcb40,
+    "dark": #e8a014,
+  ),
+  "neutral": (
+    "white": #ffffff,
+    "lightest": #f9f9f9,
+    "light": #c6c6c6,
+    "medium": #828282,
+    "dark": #5a5a5a,
+    "darkest": #393939,
+  ),
+);
+
+$gradient: (
+  "yellow-1st":
+    radial-gradient(
+      35.78% 32.82% at 50% 50%,
+      map-get($colors, "accent", "medium") 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+  "navy":
+    radial-gradient(
+      35.73% 32.78% at 50% 50%,
+      map-get($colors, "primary", "light") 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+);
+
+$archivo: "Archivo", Helvetica, Arial, sans-serif;

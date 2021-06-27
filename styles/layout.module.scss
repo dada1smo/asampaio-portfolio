@@ -1,0 +1,210 @@
+@use 'tokens';
+@use 'breakpoints';
+
+.layout {
+  position: relative;
+
+  .noise {
+    background-image: url(../public/noise.png);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    opacity: 0.5;
+    background-size: 10%;
+    animation: Grain 8s steps(10) infinite;
+    background-position: top right;
+
+    @keyframes Grain {
+      0%,
+      100% {
+        background-size: 5%;
+      }
+      10% {
+        background-size: 10%;
+      }
+      20% {
+        background-size: 15%;
+      }
+      30% {
+        background-size: 10%;
+      }
+      40% {
+        background-size: 5%;
+      }
+      50% {
+        background-size: 10%;
+      }
+      60% {
+        background-size: 15%;
+      }
+      70% {
+        background-size: 10%;
+      }
+      80% {
+        background-size: 5%;
+      }
+      90% {
+        background-size: 15%;
+      }
+    }
+  }
+
+  .yellowGradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: map-get(tokens.$gradient, "yellow-1st");
+    mix-blend-mode: multiply;
+    z-index: 1;
+    animation: YellowGradient 50s ease infinite;
+    background-size: 300% 300%;
+    background-repeat: no-repeat;
+    opacity: 1;
+
+    @-webkit-keyframes YellowGradient {
+      0% {
+        background-position: top left;
+        background-size: 500% 500%;
+      }
+      25% {
+        background-position: bottom left;
+        opacity: 0.5;
+      }
+      50% {
+        background-position: center right;
+        background-size: 500% 500%;
+      }
+      75% {
+        background-position: center top;
+        opacity: 0.5;
+      }
+      100% {
+        background-position: top left;
+        background-size: 500% 500%;
+      }
+    }
+    @-moz-keyframes YellowGradient {
+      0% {
+        background-position: top left;
+      }
+      25% {
+        background-position: bottom left;
+        opacity: 0.5;
+      }
+      50% {
+        background-position: center right;
+      }
+      75% {
+        background-position: center top;
+        opacity: 0.5;
+      }
+      100% {
+        background-position: top left;
+      }
+    }
+    @keyframes YellowGradient {
+      0% {
+        background-position: top left;
+      }
+      25% {
+        background-position: bottom left;
+        opacity: 0.5;
+      }
+      50% {
+        background-position: center right;
+      }
+      75% {
+        background-position: center top;
+        opacity: 0.5;
+      }
+      100% {
+        background-position: top left;
+      }
+    }
+  }
+
+  .navyGradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: map-get(tokens.$gradient, "navy");
+    mix-blend-mode: multiply;
+    z-index: 2;
+    animation: NavyGradient 50s ease infinite;
+    background-size: 250% 250%;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    background-position: center right;
+
+    @-webkit-keyframes NavyGradient {
+      0% {
+        background-position: center right;
+      }
+      25% {
+        background-position: top right;
+      }
+      50% {
+        background-position: center left;
+      }
+      75% {
+        background-position: center bottom;
+      }
+      100% {
+        background-position: center right;
+      }
+    }
+    @-moz-keyframes NavyGradient {
+      0% {
+        background-position: center right;
+      }
+      25% {
+        background-position: top right;
+      }
+      50% {
+        background-position: center left;
+      }
+      75% {
+        background-position: center bottom;
+      }
+      100% {
+        background-position: center right;
+      }
+    }
+    @keyframes NavyGradient {
+      0% {
+        background-position: center right;
+      }
+      25% {
+        background-position: top right;
+        opacity: 0.25;
+      }
+      50% {
+        background-position: center left;
+      }
+      75% {
+        background-position: center bottom;
+        opacity: 0.25;
+      }
+      100% {
+        background-position: center right;
+      }
+    }
+  }
+
+  .scrollable {
+    position: relative;
+    z-index: 10;
+  }
+
+  h1 {
+    color: brown;
+    font-family: tokens.$archivo;
+  }
+}

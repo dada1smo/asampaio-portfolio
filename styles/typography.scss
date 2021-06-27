@@ -1,0 +1,11 @@
+@use 'tokens';
+@use 'breakpoints';
+
+h3 {
+  font-family: tokens.$archivo;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 130%;
+  color: map-get(tokens.$colors, "primary", "medium");
+  margin: 0;
+}
