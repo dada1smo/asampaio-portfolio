@@ -1,12 +1,14 @@
 import HeroStyles from "../styles/hero.module.scss";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <div className={HeroStyles.hero}>
-      <img
+      <Image
         className={HeroStyles.BGVector}
         src="/UI_FRONT_END.svg"
         alt="Texto de fundo escrito UI+FRONT-END"
+        layout="fill"
       />
       <h3>
         Olá! Meu nome é <strong>Adalberto Sampaio</strong>, sou UI Designer e
