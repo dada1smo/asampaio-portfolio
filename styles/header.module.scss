@@ -1,0 +1,22 @@
+@use 'tokens';
+@use 'breakpoints';
+
+.header {
+  padding: 2.75em 6.25em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  .logo {
+    &:hover {
+      svg {
+        path {
+          transition: 0.3s;
+          fill: map-get(tokens.$colors, "accent", "dark");
+        }
+      }
+    }
+  }
+}
