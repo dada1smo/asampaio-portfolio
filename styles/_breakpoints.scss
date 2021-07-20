@@ -11,35 +11,29 @@ $screen-md-max: 992px;
 $screen-lg-max: 1200px;
 
 // Small devices
-@mixin xxs {
-  @media (max-width: #{$screen-xs-max}) {
-    @content;
-  }
-}
-
 @mixin xs {
-  @media (max-width: #{$screen-sm-max}) {
+  @media (max-width: #{$screen-xs-max}) {
     @content;
   }
 }
 
 // Medium devices
 @mixin sm {
-  @media (max-width: #{$screen-md-max}) {
+  @media (max-width: #{$screen-sm-max}) {
     @content;
   }
 }
 
 // Large devices
 @mixin md {
-  @media (max-width: #{$screen-lg-max}) {
+  @media (max-width: #{$screen-md-max}) {
     @content;
   }
 }
 
 // Extra large devices
 @mixin lg {
-  @media (max-width: #{$screen-xl-max}) {
+  @media (max-width: #{$screen-lg-max}) {
     @content;
   }
 }
