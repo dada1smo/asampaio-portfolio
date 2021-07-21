@@ -8,4 +8,8 @@ h3 {
   line-height: 130%;
   color: map-get(tokens.$colors, "primary", "medium");
   margin: 0;
+
+  @include breakpoints.sm {
+    font-size: 1.5em;
+  }
 }

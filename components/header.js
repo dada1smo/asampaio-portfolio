@@ -18,23 +18,34 @@ export default function Header() {
   }
 
   return (
-    <div>
-      <header className={HeaderStyles.header}>
-        <Link href="/">
-          <a className={HeaderStyles.logo}>
-            <Monogram />
-          </a>
-        </Link>
-        {mobileDevice && (
+    <header className={HeaderStyles.header}>
+      <Link href="/">
+        <a className={HeaderStyles.logo}>
+          <Monogram />
+        </a>
+      </Link>
+      {!mobileDevice && <Nav />}
+      {mobileDevice && (
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={opacityVariants}
+          transition={{
+            type: "keyframes",
+            ease: "easeIn",
+            delay: 0.3,
+          }}
+          className={HeaderStyles.mobileMenu}
+        >
           <Button
-            color="accent"
+            color="light-accent"
             label="x"
             shape="circle-md"
             onClick={openNav}
           />
-        )}
-        {!mobileDevice && <Nav />}
-      </header>
+        </motion.div>
+      )}
+
       {mobileDevice && (
         <div>
           <motion.div
@@ -55,13 +66,6 @@ export default function Header() {
                   variants={opacityVariants}
                   transition={{ ease: "easeIn", delay: 0.2 }}
                 >
-                  <Button
-                    layout
-                    color="accent"
-                    label="x"
-                    shape="circle-md"
-                    onClick={openNav}
-                  />
                   <Nav handleCloseNav={handleCloseNav} />
                 </motion.div>
               )}
@@ -74,6 +78,6 @@ export default function Header() {
           ></motion.div>
         </div>
       )}
-    </div>
+    </header>
   );
 }

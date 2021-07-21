@@ -2,7 +2,7 @@
 @use 'breakpoints';
 
 .header {
-  padding: 2.75em 6.25em;
+  padding: 2.75em tokens.$paddingX;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,6 +10,14 @@
   z-index: 100;
   display: flex;
   justify-content: space-between;
+
+  @include breakpoints.md {
+    padding: 2.75em tokens.$paddingX-md;
+  }
+
+  @include breakpoints.sm {
+    padding: 2.75em tokens.$paddingX-sm;
+  }
 
   .logo {
     &:hover {
@@ -20,6 +28,13 @@
         }
       }
     }
+  }
+
+  .mobileMenu {
+    position: fixed;
+    right: 2em;
+    top: 4em;
+    z-index: 4000;
   }
 }
 
@@ -32,8 +47,14 @@
   height: 100vh;
   z-index: 1000;
 
+  @include breakpoints.sm {
+    display: flex;
+    flex: column;
+    justify-content: center;
+  }
+
   &[data-opennav="true"] {
-    width: 400px;
+    width: 100vw;
     right: 0;
     padding: 60px 40px;
   }
@@ -57,14 +78,24 @@
   height: 100vh;
   z-index: -100;
   transition: 0.3s;
+  pointer-events: none;
 
   &[data-opennav="true"] {
     opacity: 0.6;
     z-index: 999;
+    pointer-events: all;
   }
 }
 
 .nav {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+
+  @include breakpoints.xs {
+    flex-direction: column;
+  }
+
   ul {
     display: flex;
     align-items: center;
@@ -72,5 +103,26 @@
     margin-block-end: 0;
     list-style-type: none;
     gap: 12px;
+    padding-inline-start: 0;
+
+    @include breakpoints.xs {
+      margin-top: 3em;
+    }
+  }
+
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+    .icon {
+      height: 40px;
+      width: 40px;
+
+      a {
+        height: 40px;
+        width: 40px;
+      }
+    }
   }
 }

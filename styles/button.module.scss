@@ -49,7 +49,6 @@
 
       &::before {
         width: 100%;
-        color: map-get(tokens.$colors, "primary", "dark");
       }
     }
   }
