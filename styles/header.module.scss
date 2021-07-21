@@ -42,10 +42,11 @@
   background-color: map-get(tokens.$colors, "neutral", "white");
   position: fixed;
   top: 0;
-  right: -1px;
-  width: 1px;
+  right: -100vh;
+  width: 120vw;
   height: 100vh;
   z-index: 1000;
+  overflow: hidden;
 
   @include breakpoints.sm {
     display: flex;
@@ -54,8 +55,7 @@
   }
 
   &[data-opennav="true"] {
-    width: 100vw;
-    right: 0;
+    right: -20vw;
     padding: 60px 40px;
   }
 
@@ -91,8 +91,10 @@
   display: flex;
   align-items: center;
   gap: 2em;
+  position: relative;
 
   @include breakpoints.xs {
+    margin-left: -20vw;
     flex-direction: column;
   }
 
@@ -116,13 +118,33 @@
     gap: 2em;
 
     .icon {
-      height: 40px;
-      width: 40px;
-
-      a {
+      .socialLink {
         height: 40px;
         width: 40px;
+        display: block;
+        overflow: hidden;
+        align-items: center;
+        gap: 16px;
+
+        > div {
+          min-width: 40px;
+        }
+
+        span {
+          font-family: tokens.$space-mono;
+          font-weight: 600;
+          color: map-get(tokens.$colors, "primary", "dark");
+        }
       }
+
+      // &:hover {
+      //   width: auto;
+      //   display: flex;
+
+      //   .socialLink {
+      //     width: auto;
+      //   }
+      // }
     }
   }
 }

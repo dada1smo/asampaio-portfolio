@@ -1,5 +1,5 @@
 import HeaderStyles from "../styles/header.module.scss";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { opacityVariants } from "../helpers/opacity";
 import { LinkButton } from "./button";
 import Link from "next/link";
@@ -15,7 +15,12 @@ export default function Nav(props) {
 
   return (
     <nav className={HeaderStyles.nav}>
-      <motion.ul initial="hidden" animate="visible" variants={opacityVariants}>
+      <motion.ul
+        layout
+        initial="hidden"
+        animate="visible"
+        variants={opacityVariants}
+      >
         <motion.li
           initial="hidden"
           animate="visible"
@@ -47,7 +52,14 @@ export default function Nav(props) {
             delay: 0.4,
           }}
         >
-          <a
+          <motion.a
+            layout
+            initial={{ width: "40px", display: "flex" }}
+            whileHover={{ width: "auto", display: "flex" }}
+            transition={{ when: "afterChildren", type: "tween" }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+            className={HeaderStyles.socialLink}
             href="https://dribbble.com/dada1smo"
             target="_blank"
             rel="noreferrer"
@@ -59,7 +71,8 @@ export default function Nav(props) {
               height={40}
               alt={"Ícone do Dribbble"}
             />
-          </a>
+            <motion.span layout>Dribbble</motion.span>
+          </motion.a>
         </motion.div>
         <motion.div
           className={HeaderStyles.icon}
@@ -72,7 +85,14 @@ export default function Nav(props) {
             delay: 0.4,
           }}
         >
-          <a
+          <motion.a
+            layout
+            initial={{ width: "40px", display: "flex" }}
+            whileHover={{ width: "auto", display: "flex" }}
+            transition={{ when: "afterChildren", type: "tween" }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+            className={HeaderStyles.socialLink}
             href="https://github.com/dada1smo"
             target="_blank"
             rel="noreferrer"
@@ -84,7 +104,8 @@ export default function Nav(props) {
               height={40}
               alt={"Ícone do Github"}
             />
-          </a>
+            <motion.span layout>Github</motion.span>
+          </motion.a>
         </motion.div>
         <motion.div
           className={HeaderStyles.icon}
@@ -97,7 +118,14 @@ export default function Nav(props) {
             delay: 0.4,
           }}
         >
-          <a
+          <motion.a
+            layout
+            initial={{ width: "40px", display: "flex" }}
+            whileHover={{ width: "auto", display: "flex" }}
+            transition={{ when: "afterChildren", type: "tween" }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+            className={HeaderStyles.socialLink}
             href="https://www.linkedin.com/in/sampaio-afn/"
             target="_blank"
             rel="noreferrer"
@@ -109,7 +137,8 @@ export default function Nav(props) {
               height={40}
               alt={"Ícone do LinkedIn"}
             />
-          </a>
+            <motion.span layout>LinkedIn</motion.span>
+          </motion.a>
         </motion.div>
       </div>
     </nav>

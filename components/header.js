@@ -61,10 +61,11 @@ export default function Header() {
             <AnimatePresence>
               {isNavOpen && (
                 <motion.div
+                  className={HeaderStyles.mobileNav}
                   initial="hidden"
                   animate="visible"
+                  exit="exit"
                   variants={opacityVariants}
-                  transition={{ ease: "easeIn", delay: 0.2 }}
                 >
                   <Nav handleCloseNav={handleCloseNav} />
                 </motion.div>
