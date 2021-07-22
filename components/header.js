@@ -7,6 +7,7 @@ import { opacityVariants } from "../helpers/opacity";
 import { Button } from "./button";
 import { useOpenNav } from "../hooks/use-open-nav";
 import useWindowSize from "../hooks/use-window-size";
+import MenuButton from "./menu-button";
 
 export default function Header() {
   const [isNavOpen, openNav] = useOpenNav(false);
@@ -16,6 +17,41 @@ export default function Header() {
   function handleCloseNav() {
     openNav();
   }
+
+  const variant = isNavOpen ? "opened" : "closed";
+  const top = {
+    closed: {
+      rotate: 0,
+      translateY: 0,
+    },
+    opened: {
+      rotate: 40,
+      translateY: 8,
+    },
+  };
+  const center = {
+    closed: {
+      opacity: 1,
+    },
+    opened: {
+      opacity: 0,
+    },
+  };
+  const bottom = {
+    closed: {
+      rotate: 0,
+      translateY: 0,
+    },
+    opened: {
+      rotate: -40,
+      translateY: -8,
+    },
+  };
+  const lineProps = {
+    vectorEffect: "non-scaling-stroke",
+    initial: "closed",
+    animate: variant,
+  };
 
   return (
     <header className={HeaderStyles.header}>
@@ -37,12 +73,43 @@ export default function Header() {
           }}
           className={HeaderStyles.mobileMenu}
         >
-          <Button
-            color="light-accent"
-            label="x"
-            shape="circle-md"
-            onClick={openNav}
-          />
+          <MenuButton handleCloseNav={handleCloseNav}>
+            <motion.svg
+              viewBox={`0 0 32 32`}
+              overflow="visible"
+              preserveAspectRatio="none"
+              width={24}
+              height={32}
+            >
+              <motion.line
+                x1="0"
+                x2="32"
+                y1="8"
+                y2="8"
+                strokeWidth="3"
+                variants={top}
+                {...lineProps}
+              />
+              <motion.line
+                x1="0"
+                x2="32"
+                y1="16"
+                y2="16"
+                strokeWidth="3"
+                variants={center}
+                {...lineProps}
+              />
+              <motion.line
+                x1="0"
+                x2="32"
+                y1="24"
+                y2="24"
+                strokeWidth="3"
+                variants={bottom}
+                {...lineProps}
+              />
+            </motion.svg>
+          </MenuButton>
         </motion.div>
       )}
 

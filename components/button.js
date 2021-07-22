@@ -6,7 +6,7 @@ export function Button(props) {
     <button
       className={`${ButtonStyles.btn} ${ButtonStyles[props.color]} ${
         ButtonStyles[props.shape]
-      } ${ButtonStyles[props.size]}`}
+      }`}
       onClick={props.onClick}
     >
       {props.label && <span>{props.label}</span>}

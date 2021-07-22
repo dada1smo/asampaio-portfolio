@@ -24,9 +24,14 @@
     background-color: map-get(tokens.$colors, "accent", "dark");
   }
 
-  &.light-primary {
-    background-color: map-get(tokens.$colors, "neutral", "white");
-    color: map-get(tokens.$colors, "primary", "medium");
+  &.lightPrimary {
+    color: map-get(tokens.$colors, "primary", "light");
+
+    svg {
+      line {
+        stroke: map-get(tokens.$colors, "primary", "light");
+      }
+    }
   }
 
   &.light-accent {
@@ -54,10 +59,16 @@
   }
 
   //Shapes
-  &.circle-md {
+  &.circleMD {
     border-radius: 100%;
     height: 32px;
     width: 32px;
+  }
+
+  &.circleLG {
+    border-radius: 100%;
+    height: 44px;
+    width: 44px;
   }
 
   &.regular-md {
