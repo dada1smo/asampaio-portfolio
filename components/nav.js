@@ -54,9 +54,14 @@ export default function Nav(props) {
         >
           <motion.a
             layout
-            initial={{ width: "40px", display: "flex" }}
+            initial={{ width: 40, display: "flex" }}
             whileHover={{ width: "auto", display: "flex" }}
-            transition={{ when: "afterChildren", type: "tween" }}
+            transition={{
+              when: "afterChildren",
+              type: "tween",
+              ease: "easeInOut",
+              duration: 0.5,
+            }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
             className={HeaderStyles.socialLink}
@@ -87,9 +92,14 @@ export default function Nav(props) {
         >
           <motion.a
             layout
-            initial={{ width: "40px", display: "flex" }}
+            initial={{ width: 40, display: "flex" }}
             whileHover={{ width: "auto", display: "flex" }}
-            transition={{ when: "afterChildren", type: "tween" }}
+            transition={{
+              when: "afterChildren",
+              type: "tween",
+              ease: "easeInOut",
+              duration: 0.5,
+            }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
             className={HeaderStyles.socialLink}
@@ -120,9 +130,14 @@ export default function Nav(props) {
         >
           <motion.a
             layout
-            initial={{ width: "40px", display: "flex" }}
+            initial={{ width: 40, display: "flex" }}
             whileHover={{ width: "auto", display: "flex" }}
-            transition={{ when: "afterChildren", type: "tween" }}
+            transition={{
+              when: "afterChildren",
+              type: "tween",
+              ease: "easeInOut",
+              duration: 0.5,
+            }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
             className={HeaderStyles.socialLink}
