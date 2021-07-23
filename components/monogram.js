@@ -21,8 +21,14 @@ export default function Monogram() {
 
   return (
     <motion.svg
+      layout
+      initial={{ height: "80px", width: "40px" }}
       data-scrollshow={scrollAnimation}
-      transition={{ type: "tween", ease: "easeInOut" }}
+      transition={{
+        duration: 0.3,
+        type: "spring",
+        bounce: 0,
+      }}
       width="40"
       height="80"
       viewBox="0 0 40 80"

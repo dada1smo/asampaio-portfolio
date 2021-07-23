@@ -84,15 +84,16 @@ export default function Header() {
     <motion.header
       layout
       className={HeaderStyles.header}
+      transition={{
+        duration: 0.3,
+        type: "spring",
+        bounce: 0,
+      }}
       data-scrollshow={scrollAnimation}
       // style={{ paddingTop: paddingY, paddingBottom: paddingY }}
     >
       <Link href="/">
-        <motion.a
-          data-scrollshow={scrollAnimation}
-          layout
-          className={HeaderStyles.logo}
-        >
+        <motion.a className={HeaderStyles.logo}>
           <Monogram />
         </motion.a>
       </Link>
@@ -112,6 +113,7 @@ export default function Header() {
         >
           <MenuButton handleCloseNav={handleCloseNav}>
             <motion.svg
+              layout
               viewBox={`0 0 32 32`}
               overflow="visible"
               preserveAspectRatio="none"
