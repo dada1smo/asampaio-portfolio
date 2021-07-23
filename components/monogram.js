@@ -25,7 +25,7 @@ export default function Monogram() {
       initial={{ height: "80px", width: "40px" }}
       data-scrollshow={scrollAnimation}
       transition={{
-        duration: 0.3,
+        duration: 0.1,
         type: "spring",
         bounce: 0,
       }}

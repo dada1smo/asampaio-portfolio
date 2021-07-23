@@ -85,7 +85,7 @@ export default function Header() {
       layout
       className={HeaderStyles.header}
       transition={{
-        duration: 0.3,
+        duration: 0.2,
         type: "spring",
         bounce: 0,
       }}
@@ -93,7 +93,14 @@ export default function Header() {
       // style={{ paddingTop: paddingY, paddingBottom: paddingY }}
     >
       <Link href="/">
-        <motion.a className={HeaderStyles.logo}>
+        <motion.a
+          transition={{
+            duration: 0.3,
+            type: "spring",
+            bounce: 0,
+          }}
+          className={HeaderStyles.logo}
+        >
           <Monogram />
         </motion.a>
       </Link>
@@ -114,6 +121,11 @@ export default function Header() {
           <MenuButton handleCloseNav={handleCloseNav}>
             <motion.svg
               layout
+              transition={{
+                duration: 0.3,
+                type: "spring",
+                bounce: 0,
+              }}
               viewBox={`0 0 32 32`}
               overflow="visible"
               preserveAspectRatio="none"
