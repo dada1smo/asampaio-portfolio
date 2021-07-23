@@ -1,0 +1,10 @@
+@use 'tokens';
+@use 'breakpoints';
+
+.about {
+  position: relative;
+  width: 100%;
+  height: 600px;
+
+  @include tokens.grid;
+}

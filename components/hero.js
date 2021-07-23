@@ -6,7 +6,7 @@ import Typography from "./typography";
 
 export default function Hero() {
   return (
-    <div className={HeroStyles.hero}>
+    <section className={HeroStyles.hero}>
       <motion.div
         initial="hidden"
         animate="visible"
@@ -35,6 +35,6 @@ export default function Hero() {
           e estúdios de design.
         </Typography>
       </motion.div>
-    </div>
+    </section>
   );
 }

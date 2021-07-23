@@ -2,12 +2,19 @@ import Monogram from "./monogram";
 import Nav from "./nav";
 import HeaderStyles from "../styles/header.module.scss";
 import Link from "next/link";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimateSharedLayout,
+  AnimatePresence,
+  useViewportScroll,
+  useTransform,
+} from "framer-motion";
 import { opacityVariants } from "../helpers/opacity";
 import { Button } from "./button";
 import { useOpenNav } from "../hooks/use-open-nav";
 import useWindowSize from "../hooks/use-window-size";
 import MenuButton from "./menu-button";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [isNavOpen, openNav] = useOpenNav(false);
@@ -17,6 +24,26 @@ export default function Header() {
   function handleCloseNav() {
     openNav();
   }
+
+  const { scrollY } = useViewportScroll();
+  const [scrollAnimation, scrollShow] = useState(false);
+
+  function updateScroll() {
+    if (scrollY?.current == 0) {
+      scrollShow(false);
+      console.log("not shown");
+    } else if (scrollY?.current > 100) {
+      scrollShow(true);
+      console.log("shown");
+    }
+  }
+
+  useEffect(() => {
+    return scrollY.onChange(() => updateScroll());
+  });
+
+  // const paddingY = useTransform(scrollY, [0, 600], ["2.75em", "1em"]);
+  // const scrollOpacity = useTransform(scrollY, [0, 600], ["0", "1"]);
 
   const variant = isNavOpen ? "opened" : "closed";
   const top = {
@@ -54,11 +81,20 @@ export default function Header() {
   };
 
   return (
-    <header className={HeaderStyles.header}>
+    <motion.header
+      layout
+      className={HeaderStyles.header}
+      data-scrollshow={scrollAnimation}
+      // style={{ paddingTop: paddingY, paddingBottom: paddingY }}
+    >
       <Link href="/">
-        <a className={HeaderStyles.logo}>
+        <motion.a
+          data-scrollshow={scrollAnimation}
+          layout
+          className={HeaderStyles.logo}
+        >
           <Monogram />
-        </a>
+        </motion.a>
       </Link>
       {!mobileDevice && <Nav />}
       {mobileDevice && (
@@ -71,6 +107,7 @@ export default function Header() {
             ease: "easeIn",
             delay: 0.3,
           }}
+          data-scrollshow={scrollAnimation}
           className={HeaderStyles.mobileMenu}
         >
           <MenuButton handleCloseNav={handleCloseNav}>
@@ -146,6 +183,10 @@ export default function Header() {
           ></motion.div>
         </div>
       )}
-    </header>
+      <motion.div
+        className={HeaderStyles.scrollBackdrop}
+        data-scrollshow={scrollAnimation}
+      ></motion.div>
+    </motion.header>
   );
 }

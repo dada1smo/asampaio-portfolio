@@ -3,6 +3,7 @@ import Image from "next/image";
 import HomeStyles from "../styles/home.module.scss";
 import Layout from "../components/layout";
 import Hero from "../components/hero";
+import About from "../components/about";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
 
       <main className={HomeStyles.main}>
         <Hero />
+        <About />
       </main>
     </Layout>
   );

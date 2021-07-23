@@ -39,3 +39,10 @@ $space-mono: "Space Mono", monospace;
 $paddingX: 6.25em;
 $paddingX-md: 3em;
 $paddingX-sm: 2em;
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 20px;
+}
