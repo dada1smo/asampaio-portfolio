@@ -6,7 +6,7 @@ import figma from "../public/Icone-Figma.svg";
 import adobecc from "../public/Icone-Adobe-Creative-Cloud.svg";
 import html5 from "../public/Icone-HTML5.svg";
 import css3 from "../public/Icone-CSS3.svg";
-import javascript from "../public/Icone-JavaScript.svg";
+import javascript from "../public/Icone-Javascript.svg";
 import git from "../public/Icone-Git.svg";
 import react from "../public/Icone-React.svg";
 import angular from "../public/Icone-Angular.svg";

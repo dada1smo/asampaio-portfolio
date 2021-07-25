@@ -92,7 +92,7 @@ export default function Header() {
       data-scrollshow={scrollAnimation}
       // style={{ paddingTop: paddingY, paddingBottom: paddingY }}
     >
-      <Link href="/">
+      <Link href="/" passHref>
         <motion.a
           transition={{
             duration: 0.3,

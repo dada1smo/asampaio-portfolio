@@ -16,7 +16,7 @@ export function Button(props) {
 
 export function LinkButton(props) {
   return (
-    <Link href={props.link}>
+    <Link href={props.link} passHref>
       {props.label && (
         <a
           className={`${ButtonStyles.btn} ${ButtonStyles[props.color]} ${
