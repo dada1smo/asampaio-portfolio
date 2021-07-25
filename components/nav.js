@@ -66,6 +66,7 @@ export default function Nav(props) {
             onHoverEnd={(e) => {}}
             className={HeaderStyles.socialLink}
             href="https://dribbble.com/dada1smo"
+            aria-label="Navegar para perfil do Dribbble"
             target="_blank"
             rel="noreferrer"
             {...(mobileDevice && { onClick: () => sendFalse() })}
@@ -104,6 +105,7 @@ export default function Nav(props) {
             onHoverEnd={(e) => {}}
             className={HeaderStyles.socialLink}
             href="https://github.com/dada1smo"
+            aria-label="Navegar para perfil do Github"
             target="_blank"
             rel="noreferrer"
             {...(mobileDevice && { onClick: () => sendFalse() })}
@@ -142,6 +144,7 @@ export default function Nav(props) {
             onHoverEnd={(e) => {}}
             className={HeaderStyles.socialLink}
             href="https://www.linkedin.com/in/sampaio-afn/"
+            aria-label="Navegar para perfil do LinkedIn"
             target="_blank"
             rel="noreferrer"
             {...(mobileDevice && { onClick: () => sendFalse() })}

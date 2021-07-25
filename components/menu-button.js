@@ -8,6 +8,7 @@ export default function MenuButton(props) {
   return (
     <button
       className={`${ButtonStyles.btn} ${ButtonStyles.lightPrimary} ${ButtonStyles.circleLG}`}
+      aria-label="Abrir menu de navegação"
       onClick={() => sendFalse()}
     >
       {props.children}
