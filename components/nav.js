@@ -5,6 +5,9 @@ import { LinkButton } from "./button";
 import Link from "next/link";
 import useWindowSize from "../hooks/use-window-size";
 import Image from "next/image";
+import dribbble from "../public/Dribbble-Icon.svg";
+import github from "../public/Github-Icon.svg";
+import linkedin from "../public/LinkedIn-Icon.svg";
 
 export default function Nav(props) {
   function sendFalse() {
@@ -72,10 +75,12 @@ export default function Nav(props) {
             {...(mobileDevice && { onClick: () => sendFalse() })}
           >
             <Image
-              src="/Dribbble-Icon.svg"
+              src={dribbble}
               width={40}
               height={40}
               alt={"Ícone do Dribbble"}
+              placeholder="blur"
+              blurDataURL="/SVG-placeholder.png"
             />
             <motion.span layout>Dribbble</motion.span>
           </motion.a>
@@ -111,10 +116,12 @@ export default function Nav(props) {
             {...(mobileDevice && { onClick: () => sendFalse() })}
           >
             <Image
-              src="/Github-Icon.svg"
+              src={github}
               width={40}
               height={40}
               alt={"Ícone do Github"}
+              placeholder="blur"
+              blurDataURL="/SVG-placeholder.png"
             />
             <motion.span layout>Github</motion.span>
           </motion.a>
@@ -150,10 +157,12 @@ export default function Nav(props) {
             {...(mobileDevice && { onClick: () => sendFalse() })}
           >
             <Image
-              src="/LinkedIn-Icon.svg"
+              src={linkedin}
               width={40}
               height={40}
               alt={"Ícone do LinkedIn"}
+              placeholder="blur"
+              blurDataURL="/SVG-placeholder.png"
             />
             <motion.span layout>LinkedIn</motion.span>
           </motion.a>

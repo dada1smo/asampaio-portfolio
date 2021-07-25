@@ -1,17 +1,28 @@
 import AboutStyles from "../styles/about.module.scss";
 import Image from "next/image";
 import Typography from "./typography";
+import profile from "../public/Perfil-Adalberto-Sampaio.png";
+import figma from "../public/Icone-Figma.svg";
+import adobecc from "../public/Icone-Adobe-Creative-Cloud.svg";
+import html5 from "../public/Icone-HTML5.svg";
+import css3 from "../public/Icone-CSS3.svg";
+import javascript from "../public/Icone-JavaScript.svg";
+import git from "../public/Icone-Git.svg";
+import react from "../public/Icone-React.svg";
+import angular from "../public/Icone-Angular.svg";
+import flutter from "../public/Icone-Flutter.svg";
 
 export default function About() {
   return (
     <section className={AboutStyles.about}>
       <div className={AboutStyles.profile}>
         <Image
-          src="/Perfil-Adalberto-Sampaio.png"
+          src={profile}
           alt="Foto de perfil de Adalberto Sampaio"
           layout="fill"
           objectFit="contain"
           objectPosition="top left"
+          placeholder="blur"
         />
       </div>
       <Typography tag="h3">
@@ -26,67 +37,85 @@ export default function About() {
       </Typography>
       <div className={AboutStyles.badges}>
         <Image
-          src="/Icone-Figma.svg"
+          src={figma}
           alt="Figma"
           width="36"
           height="48"
           title="Figma"
+          placeholder="blur"
+          blurDataURL="/SVG-placeholder.png"
         />
         <Image
-          src="/Icone-Adobe-Creative-Cloud.svg"
+          src={adobecc}
           alt="Adobe Creative Cloud"
           width="44"
           height="48"
           title="Adobe Creative Cloud"
+          placeholder="blur"
+          blurDataURL="/SVG-placeholder.png"
         />
         <Image
-          src="/Icone-HTML5.svg"
+          src={html5}
           alt="HTML 5"
           width="36"
           height="48"
           title="HTML 5"
+          placeholder="blur"
+          blurDataURL="/SVG-placeholder.png"
         />
         <Image
-          src="/Icone-CSS3.svg"
+          src={css3}
           alt="CSS 3"
           width="36"
           height="48"
           title="CSS 3"
+          placeholder="blur"
+          blurDataURL="/SVG-placeholder.png"
         />
         <Image
-          src="/Icone-Javascript.svg"
+          src={javascript}
           alt="JavaScript"
           width="44"
           height="48"
           title="JavaScript"
+          placeholder="blur"
+          blurDataURL="/SVG-placeholder.png"
         />
         <Image
-          src="/Icone-Git.svg"
+          src={git}
           alt="Git"
           width="48"
           height="48"
           title="Git"
+          placeholder="blur"
+          blurDataURL="/SVG-placeholder.png"
         />
         <Image
-          src="/Icone-React.svg"
+          src={react}
           alt="React"
           width="48"
           height="48"
           title="React"
+          placeholder="blur"
+          blurDataURL="/SVG-placeholder.png"
         />
         <Image
-          src="/Icone-Angular.svg"
+          src={angular}
           alt="Angular"
           width="40"
           height="48"
           title="Angular"
+          placeholder="blur"
+          blurDataURL="/SVG-placeholder.png"
         />
         <Image
-          src="/Icone-Flutter.svg"
+          src={flutter}
           alt="Flutter"
           width="48"
           height="48"
           title="Flutter"
+          placeholder="blur"
+          blurDataURL="/SVG-placeholder.png"
         />
       </div>
     </section>

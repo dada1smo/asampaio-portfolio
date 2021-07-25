@@ -14,6 +14,8 @@
   grid-template-rows: auto;
 
   @include breakpoints.sm {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
     grid-template-columns: auto auto;
   }
 
@@ -41,7 +43,7 @@
     @include breakpoints.sm {
       flex-direction: column;
       align-items: flex-start;
-      gap: 8px;
+      gap: 0;
     }
   }
 }
