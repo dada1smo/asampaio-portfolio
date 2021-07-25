@@ -32,10 +32,10 @@ export default function Nav(props) {
           }}
         >
           <LinkButton
-            color="light-accent"
+            color="lightAccent"
             link="#contact"
             label="Contato"
-            shape="regular-md"
+            shape="regularMD"
             {...(mobileDevice && { onClick: () => sendFalse() })}
           />
         </motion.li>

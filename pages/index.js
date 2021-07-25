@@ -6,6 +6,7 @@ import Hero from "../components/hero";
 import About from "../components/about";
 import ScrollFadeIn from "../components/scroll-fade-in";
 import Contact from "../components/contact";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         </ScrollFadeIn>
         <ScrollFadeIn duration={0.4}>
           <Contact />
+          <Footer />
         </ScrollFadeIn>
       </main>
     </Layout>

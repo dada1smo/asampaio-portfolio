@@ -34,7 +34,7 @@
     }
   }
 
-  &.light-accent {
+  &.lightAccent {
     background-color: map-get(tokens.$colors, "neutral", "white");
     color: map-get(tokens.$colors, "accent", "dark");
 
@@ -58,6 +58,39 @@
     }
   }
 
+  &.transparentPrimary {
+    background-color: transparent;
+    color: map-get(tokens.$colors, "primary", "dark");
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: map-get(tokens.$colors, "primary", "light");
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      transition: 0.3s;
+      z-index: 0;
+    }
+
+    &:hover {
+      &::before {
+        background-color: map-get(tokens.$colors, "primary", "dark");
+        width: 100%;
+        animation: hover 0.3s;
+      }
+
+      @keyframes hover {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   //Shapes
   &.circleMD {
     border-radius: 100%;
@@ -71,7 +104,11 @@
     width: 44px;
   }
 
-  &.regular-md {
+  &.regularMD {
     padding: 8px 28px;
+  }
+
+  &.slimMD {
+    padding: 8px 0;
   }
 }

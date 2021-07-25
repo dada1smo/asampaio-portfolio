@@ -38,6 +38,15 @@ h4 {
   margin: 0;
 }
 
+p {
+  font-family: tokens.$archivo;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: map-get(tokens.$colors, "primary", "light");
+  margin: 0;
+}
+
 strong {
   font-weight: 700;
 }
