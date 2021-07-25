@@ -1,3 +1,5 @@
+@use 'breakpoints';
+
 $colors: (
   "primary": (
     "light": #8995af,
@@ -44,5 +46,21 @@ $paddingX-sm: 2em;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  column-gap: 20px;
+  column-gap: 60px;
+
+  @include breakpoints.md {
+    column-gap: 0;
+  }
+}
+
+@mixin sectionPadding {
+  padding: 0 $paddingX 0;
+
+  @include breakpoints.md {
+    padding: 0 $paddingX-md 0;
+  }
+
+  @include breakpoints.sm {
+    padding: 0 $paddingX-sm 0;
+  }
 }

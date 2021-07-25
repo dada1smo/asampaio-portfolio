@@ -2,13 +2,13 @@
 @use 'breakpoints';
 
 .main {
-  padding: 10% tokens.$paddingX 0;
+  padding: 10% 0 0;
 
   @include breakpoints.md {
-    padding: 20% tokens.$paddingX-md 0;
+    padding: 20% 0 0;
   }
 
   @include breakpoints.sm {
-    padding: 20% tokens.$paddingX-sm 0;
+    padding: 20% 0 0;
   }
 }

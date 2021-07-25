@@ -1,0 +1,19 @@
+@use 'tokens';
+@use 'breakpoints';
+
+.contact {
+  position: relative;
+  width: 100%;
+  background-color: map-get(tokens.$colors, "accent", "medium");
+
+  @include tokens.grid;
+  @include tokens.sectionPadding;
+
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+  grid-template-rows: auto;
+
+  h2 {
+    grid-column: 1 / span 4;
+  }
+}

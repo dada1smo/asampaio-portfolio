@@ -13,6 +13,8 @@
 
   &[data-scrollshow="true"] {
     padding: 1em tokens.$paddingX;
+    box-shadow: 0px 2px 8px
+      rgba(map-get(tokens.$colors, "primary", "dark"), 0.1);
   }
 
   @include breakpoints.md {

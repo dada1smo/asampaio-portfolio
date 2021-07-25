@@ -33,7 +33,7 @@ export default function Nav(props) {
         >
           <LinkButton
             color="light-accent"
-            link="#contato"
+            link="#contact"
             label="Contato"
             shape="regular-md"
             {...(mobileDevice && { onClick: () => sendFalse() })}

@@ -1,6 +1,21 @@
 @use 'tokens';
 @use 'breakpoints';
 
+h2 {
+  font-family: tokens.$archivo;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 48px;
+  font-weight: 700;
+  color: map-get(tokens.$colors, "primary", "medium");
+  margin: 0;
+
+  @include breakpoints.sm {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
 h3 {
   font-family: tokens.$archivo;
   font-size: 2em;
@@ -12,4 +27,17 @@ h3 {
   @include breakpoints.sm {
     font-size: 1.5em;
   }
+}
+
+h4 {
+  font-family: tokens.$archivo;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: map-get(tokens.$colors, "primary", "light");
+  margin: 0;
+}
+
+strong {
+  font-weight: 700;
 }

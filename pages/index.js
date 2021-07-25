@@ -4,6 +4,8 @@ import HomeStyles from "../styles/home.module.scss";
 import Layout from "../components/layout";
 import Hero from "../components/hero";
 import About from "../components/about";
+import ScrollFadeIn from "../components/scroll-fade-in";
+import Contact from "../components/contact";
 
 export default function Home() {
   return (
@@ -16,7 +18,12 @@ export default function Home() {
 
       <main className={HomeStyles.main}>
         <Hero />
-        <About />
+        <ScrollFadeIn duration={0.4}>
+          <About />
+        </ScrollFadeIn>
+        <ScrollFadeIn duration={0.4}>
+          <Contact />
+        </ScrollFadeIn>
       </main>
     </Layout>
   );
