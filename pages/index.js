@@ -13,11 +13,14 @@ export default function Home() {
     <Layout>
       <Head>
         <title>Adalberto Sampaio</title>
-        <meta name="description" content="Portfólio de design e front-end" />
         <meta
           property="og:title"
           content="
-Olá! Meu nome é Adalberto Sampaio, sou UI Designer e Desenvolvedor Front-End"
+          Portfólio de UI design e front-end "
+        />
+        <meta
+          name="description"
+          content="Olá! Meu nome é Adalberto Sampaio, sou UI Designer e Desenvolvedor Front-End"
         />
         <meta
           property="og:image"
