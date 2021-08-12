@@ -7,7 +7,6 @@ import About from "../components/about";
 import ScrollFadeIn from "../components/scroll-fade-in";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
-import ogImage from "/og-image.png";
 
 export default function Home() {
   return (
@@ -20,7 +19,10 @@ export default function Home() {
           content="
 Olá! Meu nome é Adalberto Sampaio, sou UI Designer e Desenvolvedor Front-End"
         />
-        <meta property="og:image" content={ogImage} />
+        <meta
+          property="og:image"
+          content="https://www.adalbertosampaio.com/og-image.png"
+        />
         <link rel="icon" href="/favicon.png" />
       </Head>
 
