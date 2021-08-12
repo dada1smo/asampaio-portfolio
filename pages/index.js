@@ -7,7 +7,7 @@ import About from "../components/about";
 import ScrollFadeIn from "../components/scroll-fade-in";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
-import ogImage from "../public/og-image.png";
+import ogImage from "/og-image.png";
 
 export default function Home() {
   return (
@@ -15,7 +15,11 @@ export default function Home() {
       <Head>
         <title>Adalberto Sampaio</title>
         <meta name="description" content="Portfólio de design e front-end" />
-        <meta property="og:title" content="Portfólio de design e front-end" />
+        <meta
+          property="og:title"
+          content="
+Olá! Meu nome é Adalberto Sampaio, sou UI Designer e Desenvolvedor Front-End"
+        />
         <meta property="og:image" content={ogImage} />
         <link rel="icon" href="/favicon.png" />
       </Head>
