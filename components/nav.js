@@ -1,8 +1,7 @@
 import HeaderStyles from "../styles/header.module.scss";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { opacityVariants } from "../helpers/opacity";
 import { LinkButton } from "./button";
-import Link from "next/link";
 import useWindowSize from "../hooks/use-window-size";
 import Image from "next/image";
 import dribbble from "../public/Dribbble-Icon.svg";

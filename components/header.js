@@ -2,15 +2,8 @@ import Monogram from "./monogram";
 import Nav from "./nav";
 import HeaderStyles from "../styles/header.module.scss";
 import Link from "next/link";
-import {
-  motion,
-  AnimateSharedLayout,
-  AnimatePresence,
-  useViewportScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, AnimatePresence, useViewportScroll } from "framer-motion";
 import { opacityVariants } from "../helpers/opacity";
-import { Button } from "./button";
 import { useOpenNav } from "../hooks/use-open-nav";
 import useWindowSize from "../hooks/use-window-size";
 import MenuButton from "./menu-button";
@@ -41,9 +34,6 @@ export default function Header() {
   useEffect(() => {
     return scrollY.onChange(() => updateScroll());
   });
-
-  // const paddingY = useTransform(scrollY, [0, 600], ["2.75em", "1em"]);
-  // const scrollOpacity = useTransform(scrollY, [0, 600], ["0", "1"]);
 
   const variant = isNavOpen ? "opened" : "closed";
   const top = {
@@ -90,7 +80,6 @@ export default function Header() {
         bounce: 0,
       }}
       data-scrollshow={scrollAnimation}
-      // style={{ paddingTop: paddingY, paddingBottom: paddingY }}
     >
       <Link href="/" passHref>
         <motion.a
