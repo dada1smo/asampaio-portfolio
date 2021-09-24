@@ -1,0 +1,167 @@
+@use 'tokens';
+@use 'breakpoints';
+
+.portfolio {
+  position: relative;
+  width: 100%;
+
+  @include tokens.grid;
+  @include tokens.sectionPadding;
+
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+  min-height: 600px;
+
+  @include breakpoints.md {
+    padding-top: 8px !important;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .title {
+    display: flex;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+
+    @include breakpoints.md {
+      grid-column: 1 / span 12;
+      grid-row: 1 / span 1;
+    }
+
+    .sticky {
+      position: sticky;
+      height: 200px;
+      width: 100%;
+      top: 84px;
+
+      @include breakpoints.md {
+        height: auto;
+        position: static;
+        margin-bottom: 40px;
+      }
+    }
+
+    h2 {
+      transform: rotate(270deg);
+      transform-origin: 0 0;
+      display: inline;
+      position: absolute;
+      bottom: -32px;
+
+      @include breakpoints.md {
+        transform: none;
+        position: static;
+      }
+    }
+  }
+
+  .cards {
+    grid-column: 2 / span 11;
+    grid-row: 1 / span 3;
+
+    @include breakpoints.lg {
+      flex-wrap: wrap;
+    }
+
+    @include breakpoints.md {
+      grid-column: 1 / span 12;
+      grid-row: 4 / span 1;
+      justify-content: center;
+    }
+
+    a {
+      margin-bottom: 40px;
+      display: block;
+
+      &:last-of-type,
+      &:only-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .card {
+      background-color: map-get(tokens.$colors, "neutral", "white");
+      padding: 12px;
+      transition: 0.3s;
+
+      img {
+        filter: grayscale(1) !important;
+        transition: 0.3s;
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 32px;
+
+        @include breakpoints.md {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 30px;
+          padding: 16px 0;
+        }
+
+        .text {
+          h3 {
+            margin-bottom: 8px;
+          }
+        }
+
+        .more {
+          font-family: tokens.$space-mono;
+          text-transform: uppercase;
+          color: map-get(tokens.$colors, "accent", "dark");
+          font-weight: 600;
+          position: relative;
+          padding-right: 60px;
+
+          &::after {
+            content: "";
+            background-image: url(../public/arrow.svg);
+            width: 48px;
+            height: 20px;
+            position: absolute;
+            top: 4px;
+            right: 0;
+            background-repeat: no-repeat;
+            background-position: -1px top;
+            transition: 0.3s;
+          }
+        }
+      }
+
+      &:hover {
+        img {
+          filter: none !important;
+          transform: scale(1.1);
+        }
+
+        .more {
+          &::after {
+            animation: arrow;
+            animation-duration: 0.8s;
+            animation-fill-mode: forwards;
+
+            @keyframes arrow {
+              0% {
+                background-position: 80px top;
+              }
+              25% {
+                background-position: 60px top;
+              }
+              50% {
+                background-position: -32px top;
+              }
+              100% {
+                background-position: -1px top;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

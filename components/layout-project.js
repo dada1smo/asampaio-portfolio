@@ -11,7 +11,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -100 },
 };
 
-export default function Layout({ children }) {
+export default function LayoutProject({ children }) {
   return (
     <div className={LayoutStyles.layout}>
       <Head>
@@ -49,7 +49,16 @@ export default function Layout({ children }) {
         className={LayoutStyles.navyGradient}
       ></motion.div>
       <div className={LayoutStyles.scrollable}>
-        <main className={HomeStyles.main}>{children}</main>
+        <motion.main
+          className={HomeStyles.main}
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ type: "linear", delay: 0.5 }}
+        >
+          {children}
+        </motion.main>
       </div>
     </div>
   );

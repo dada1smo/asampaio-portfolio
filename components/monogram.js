@@ -8,10 +8,10 @@ export default function Monogram() {
   function updateScroll() {
     if (scrollY?.current == 0) {
       scrollShow(false);
-      console.log("not shown");
+      // console.log("not shown");
     } else if (scrollY?.current > 100) {
       scrollShow(true);
-      console.log("shown");
+      // console.log("shown");
     }
   }
 

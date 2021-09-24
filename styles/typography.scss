@@ -38,11 +38,20 @@ h4 {
   margin: 0;
 }
 
+h6 {
+  font-family: tokens.$space-mono;
+  font-size: 20px;
+  color: map-get(tokens.$colors, "neutral", "medium");
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+}
+
 p {
   font-family: tokens.$archivo;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 30px;
   color: map-get(tokens.$colors, "primary", "light");
   margin: 0;
 }
