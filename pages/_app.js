@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
       <AnimatePresence
         exitBeforeEnter
         initial={false}
-        onExitComplete={window.scrollTo(0, 0)}
+        // onExitComplete={window.scrollTo(0, 0)}
       >
         <Component {...pageProps} />
       </AnimatePresence>
