@@ -1,7 +1,6 @@
 import Head from "next/head";
 import LayoutStyles from "../styles/layout.module.scss";
 import HomeStyles from "../styles/home.module.scss";
-import Header from "./header";
 import { motion } from "framer-motion";
 import { opacityVariants } from "../helpers/opacity";
 

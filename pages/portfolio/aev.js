@@ -1,12 +1,8 @@
-import Hero from "../../components/hero";
-import Portfolio from "../../components/portfolio";
-import About from "../../components/about";
 import ScrollFadeIn from "../../components/scroll-fade-in";
 import Contact from "../../components/contact";
 import Footer from "../../components/footer";
 import ProjectAev from "../../components/project-aev";
 import LayoutProject from "../../components/layout-project";
-import Layout from "../../components/layout";
 
 export default function Home() {
   return (
