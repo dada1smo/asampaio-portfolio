@@ -6,6 +6,7 @@ import Contact from "../../components/contact";
 import Footer from "../../components/footer";
 import ProjectAev from "../../components/project-aev";
 import LayoutProject from "../../components/layout-project";
+import Layout from "../../components/layout";
 
 export default function Home() {
   return (
@@ -13,8 +14,8 @@ export default function Home() {
       <ProjectAev />
       <ScrollFadeIn duration={0.4}>
         <Contact />
-        <Footer />
       </ScrollFadeIn>
+      <Footer />
     </LayoutProject>
   );
 }

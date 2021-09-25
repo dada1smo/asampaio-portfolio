@@ -31,8 +31,6 @@ export default function Layout({ children }) {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-
-      <Header />
       <div className={LayoutStyles.noise}></div>
       <motion.div
         initial="hidden"

@@ -31,8 +31,6 @@ export default function LayoutProject({ children }) {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-
-      <Header />
       <div className={LayoutStyles.noise}></div>
       <motion.div
         initial="hidden"
@@ -55,7 +53,7 @@ export default function LayoutProject({ children }) {
           animate="enter"
           exit="exit"
           variants={variants}
-          transition={{ type: "linear", delay: 0.5 }}
+          transition={{ type: "linear", delay: 0.3 }}
         >
           {children}
         </motion.main>

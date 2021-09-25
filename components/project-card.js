@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ProjectCard(props) {
   return (
-    <Link href={props.projectLink} passHref>
+    <Link href={props.projectLink} passHref scroll={false}>
       <a>
         <div className={PortfolioStyles.card}>
           <Image

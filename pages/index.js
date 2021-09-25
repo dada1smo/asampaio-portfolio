@@ -18,8 +18,8 @@ export default function Home() {
       </ScrollFadeIn>
       <ScrollFadeIn duration={0.4}>
         <Contact />
-        <Footer />
       </ScrollFadeIn>
+      <Footer />
     </Layout>
   );
 }
