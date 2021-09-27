@@ -14,7 +14,7 @@ export default function ProjectCard(props) {
             quality="100"
             layout="responsive"
             objectFit="cover"
-            objectPosition="top left"
+            objectPosition="center center"
             placeholder="blur"
           />
           <div className={PortfolioStyles.footer}>
@@ -25,7 +25,7 @@ export default function ProjectCard(props) {
               <Typography tag="h6">{props.tags}</Typography>
             </div>
 
-            <div className={PortfolioStyles.more}>Ver projeto</div>
+            <div className={PortfolioStyles.more}>Conheça o projeto</div>
           </div>
         </div>
       </a>
