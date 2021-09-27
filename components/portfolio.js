@@ -52,7 +52,7 @@ export default function Portfolio() {
           tags="#UI #FRONT #LANDING"
         ></ProjectCard>
       </div>
-      <Typography tag="h3">Confira mais alguns trabalhos</Typography>
+      <Typography tag="h3">Mais trabalhos</Typography>
       <div className={PortfolioStyles.shot}>
         <SRLWrapper options={options}>
           <Image
