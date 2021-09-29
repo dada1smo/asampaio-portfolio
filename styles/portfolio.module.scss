@@ -1,5 +1,5 @@
-@use 'tokens';
-@use 'breakpoints';
+@use "tokens";
+@use "breakpoints";
 
 .portfolio {
   position: relative;
@@ -212,6 +212,7 @@
     &:hover {
       img {
         filter: none !important;
+        transform: scale(1.1);
       }
     }
   }
