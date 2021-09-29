@@ -1,5 +1,5 @@
-@use 'tokens';
-@use 'breakpoints';
+@use "tokens";
+@use "breakpoints";
 
 .about {
   position: relative;
@@ -47,7 +47,7 @@
     }
   }
 
-  h4 {
+  p {
     grid-column: 9 / span 4;
     grid-row: 1 / span 3;
 

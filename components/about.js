@@ -29,7 +29,7 @@ export default function About() {
         Designer e desenvolvedor brasileiro atualmente residindo em Brasília.
         Colecionador de Lego e degustador de amendoim japonês.
       </Typography>
-      <Typography tag="h4">
+      <Typography tag="p">
         <strong>Busco</strong> contribuir com projetos e produtos digitais na
         construção de interfaces funcionais, acessíveis e com apelo visual.
         Busco trabalhar na tangente entre design e desenvolvimento para garantir
