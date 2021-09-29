@@ -14,6 +14,7 @@ import aevScreen1 from "../public/aev-home.png";
 import aevScreen2 from "../public/aev-code.png";
 import aevScreen3 from "../public/aev-code-1.png";
 import aevScreen4 from "../public/aev-code-2.png";
+import gifPlaceholder from "../public/GIF-placeholder.png";
 import Image from "next/image";
 
 export default function ProjectAev() {
@@ -101,6 +102,8 @@ export default function ProjectAev() {
             layout="responsive"
             objectFit="cover"
             objectPosition="top left"
+            placeholder="blur"
+            blurDataURL={gifPlaceholder}
           />
         </div>
         <div className={ProjectStyles.tokens}>

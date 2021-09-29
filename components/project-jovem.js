@@ -14,6 +14,7 @@ import jovemScreen2 from "../public/jovem-4-0.png";
 import jovemScreen3 from "../public/jovem-aprendizagem.png";
 import jovemScreen4 from "../public/jovem-empresas.png";
 import Image from "next/image";
+import gifPlaceholder from "../public/GIF-placeholder.png";
 
 export default function ProjectJovem() {
   return (
@@ -88,6 +89,8 @@ export default function ProjectJovem() {
             layout="responsive"
             objectFit="cover"
             objectPosition="top left"
+            placeholder="blur"
+            blurDataURL={gifPlaceholder}
           />
         </div>
         <div className={ProjectStyles.tokens}>
