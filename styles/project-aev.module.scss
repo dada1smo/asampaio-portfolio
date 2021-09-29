@@ -1,5 +1,5 @@
-@use 'tokens';
-@use 'breakpoints';
+@use "tokens";
+@use "breakpoints";
 
 .page {
   position: relative;
@@ -34,16 +34,16 @@
       grid-row: 2 / span 1;
     }
 
-    h6 {
-      margin-bottom: 32px;
-    }
-
     h2 {
       margin-bottom: 28px;
     }
 
     p {
       margin-bottom: 80px;
+
+      &:first-of-type {
+        margin-bottom: 20px;
+      }
     }
   }
 

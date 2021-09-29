@@ -1,5 +1,5 @@
-@use 'tokens';
-@use 'breakpoints';
+@use "tokens";
+@use "breakpoints";
 
 h2 {
   font-family: tokens.$archivo;
@@ -34,7 +34,7 @@ h4 {
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
-  color: map-get(tokens.$colors, "primary", "light");
+  color: map-get(tokens.$colors, "primary", "medium");
   margin: 0;
 }
 
@@ -54,6 +54,15 @@ p {
   line-height: 30px;
   color: map-get(tokens.$colors, "primary", "light");
   margin: 0;
+
+  span.category {
+    font-family: tokens.$space-mono;
+    font-size: 20px;
+    color: map-get(tokens.$colors, "neutral", "dark");
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 400;
+  }
 }
 
 strong {

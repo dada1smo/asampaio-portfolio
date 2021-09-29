@@ -22,7 +22,9 @@ export default function ProjectCard(props) {
               <Typography tag="h3">
                 <strong>{props.title}</strong>
               </Typography>
-              <Typography tag="h6">{props.tags}</Typography>
+              <Typography tag="p">
+                <span className="category">{props.tags}</span>
+              </Typography>
             </div>
 
             <div className={PortfolioStyles.more}>Conheça o projeto</div>

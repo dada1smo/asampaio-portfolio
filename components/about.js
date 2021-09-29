@@ -30,10 +30,10 @@ export default function About() {
         Colecionador de Lego e degustador de amendoim japonês.
       </Typography>
       <Typography tag="h4">
-        <strong>Interessado em</strong> contribuir com projetos e produtos
-        digitais na construção de interfaces funcionais, acessíveis e com apelo
-        visual. Busco trabalhar na tangente entre design e desenvolvimento para
-        garantir uma integração ágil e eficiente entre UX e tecnologia.
+        <strong>Busco</strong> contribuir com projetos e produtos digitais na
+        construção de interfaces funcionais, acessíveis e com apelo visual.
+        Busco trabalhar na tangente entre design e desenvolvimento para garantir
+        uma integração ágil e eficiente entre UX e tecnologia.
       </Typography>
       <div className={AboutStyles.badges}>
         <Image

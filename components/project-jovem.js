@@ -31,7 +31,9 @@ export default function ProjectJovem() {
           />
         </div>
         <div className={ProjectStyles.textIntro}>
-          <Typography tag="h6">Landing page</Typography>
+          <Typography tag="p">
+            <span className="category">Landing page</span>
+          </Typography>
           <Typography tag="h2">Jovem Aprendiz SENAI</Typography>
           <Typography tag="p">
             Nova página do programa de Aprendizagem Industrial (Jovem Aprendiz)

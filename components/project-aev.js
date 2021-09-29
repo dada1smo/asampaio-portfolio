@@ -32,7 +32,9 @@ export default function ProjectAev() {
           />
         </div>
         <div className={ProjectStyles.textIntro}>
-          <Typography tag="h6">Aplicativo</Typography>
+          <Typography tag="p">
+            <span className="category">Aplicativo</span>
+          </Typography>
           <Typography tag="h2">
             e-notariado: Autorização Eletrônica de Viagem
           </Typography>

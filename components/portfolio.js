@@ -42,12 +42,14 @@ export default function Portfolio() {
         <ProjectCard
           projectLink="/portfolio/aev"
           imgSrc={aev}
+          imgAlt=""
           title="Autorização Eletrônica de Viagem"
           tags="#UI #FRONT-END #APLICATIVO"
         ></ProjectCard>
         <ProjectCard
           projectLink="/portfolio/jovem-aprendiz-senai"
           imgSrc={jovem}
+          imgAlt=""
           title="Jovem Aprendiz SENAI"
           tags="#UI #FRONT #LANDING"
         ></ProjectCard>

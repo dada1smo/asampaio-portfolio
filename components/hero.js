@@ -28,7 +28,7 @@ export default function Hero() {
           transition={{ ease: "easeIn", duration: 1 }}
           className={HeroStyles.intro}
         >
-          <Typography tag="h3">
+          <Typography tag="h1">
             Olá! Meu nome é <strong>Adalberto Sampaio</strong>, sou{" "}
             <span>UI Designer</span> e <span>Desenvolvedor Front-End</span>. Meu
             foco é dar vida a interfaces, do desenho até a implementação. Já
