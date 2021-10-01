@@ -5,10 +5,11 @@ import About from "../components/about";
 import ScrollFadeIn from "../components/scroll-fade-in";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
+import LayoutProject from "../components/layout-project";
 
 export default function Home() {
   return (
-    <Layout>
+    <LayoutProject>
       <Hero />
       <ScrollFadeIn duration={0.4}>
         <Portfolio />
@@ -20,6 +21,6 @@ export default function Home() {
         <Contact />
       </ScrollFadeIn>
       <Footer />
-    </Layout>
+    </LayoutProject>
   );
 }

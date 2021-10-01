@@ -79,18 +79,20 @@ export default function Header() {
       }}
       data-scrollshow={scrollAnimation}
     >
-      <Link href="/" passHref aria-label="Ir para página inicial">
-        <motion.a
-          transition={{
-            duration: 0.3,
-            type: "spring",
-            bounce: 0,
-          }}
-          className={HeaderStyles.logo}
-        >
-          <Monogram />
-        </motion.a>
-      </Link>
+      <AnimatePresence>
+        <Link href="/" passHref aria-label="Ir para página inicial">
+          <motion.a
+            transition={{
+              duration: 0.3,
+              type: "spring",
+              bounce: 0,
+            }}
+            className={HeaderStyles.logo}
+          >
+            <Monogram />
+          </motion.a>
+        </Link>
+      </AnimatePresence>
       {!mobileDevice && <Nav />}
       {mobileDevice && (
         <motion.div

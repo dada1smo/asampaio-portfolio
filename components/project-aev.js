@@ -66,6 +66,7 @@ export default function ProjectAev() {
               layout="responsive"
               objectFit="cover"
               objectPosition="top left"
+              placeholder="blur"
             />
             <Image
               src={aevScreen2}
@@ -74,6 +75,7 @@ export default function ProjectAev() {
               layout="responsive"
               objectFit="cover"
               objectPosition="top left"
+              placeholder="blur"
             />
             <Image
               src={aevScreen3}
@@ -82,6 +84,7 @@ export default function ProjectAev() {
               layout="responsive"
               objectFit="cover"
               objectPosition="top left"
+              placeholder="blur"
             />
             <Image
               src={aevScreen4}
@@ -90,6 +93,7 @@ export default function ProjectAev() {
               layout="responsive"
               objectFit="cover"
               objectPosition="top left"
+              placeholder="blur"
             />
           </div>
         </div>
@@ -118,6 +122,7 @@ export default function ProjectAev() {
                 layout="responsive"
                 objectFit="cover"
                 objectPosition="top left"
+                placeholder="blur"
               />
             </div>
 
@@ -130,6 +135,7 @@ export default function ProjectAev() {
                 layout="responsive"
                 objectFit="cover"
                 objectPosition="top left"
+                placeholder="blur"
               />
               <div className={ProjectStyles.divider}></div>
               <Typography tag="h4">Ícone do app</Typography>
@@ -140,6 +146,7 @@ export default function ProjectAev() {
                 layout="responsive"
                 objectFit="cover"
                 objectPosition="top left"
+                placeholder="blur"
               />
             </div>
 
@@ -154,6 +161,7 @@ export default function ProjectAev() {
                     layout="responsive"
                     objectFit="cover"
                     objectPosition="top left"
+                    placeholder="blur"
                   />
                 </div>
                 <div>
@@ -165,6 +173,7 @@ export default function ProjectAev() {
                     layout="responsive"
                     objectFit="cover"
                     objectPosition="top left"
+                    placeholder="blur"
                   />
                 </div>
               </div>
@@ -177,6 +186,7 @@ export default function ProjectAev() {
                 layout="responsive"
                 objectFit="cover"
                 objectPosition="top left"
+                placeholder="blur"
               />
             </div>
           </div>
