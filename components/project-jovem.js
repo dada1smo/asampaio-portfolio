@@ -53,6 +53,7 @@ export default function ProjectJovem() {
               layout="responsive"
               objectFit="cover"
               objectPosition="top left"
+              placeholder="blur"
             />
             <Image
               src={jovemScreen2}
@@ -61,6 +62,7 @@ export default function ProjectJovem() {
               layout="responsive"
               objectFit="cover"
               objectPosition="top left"
+              placeholder="blur"
             />
             <Image
               src={jovemScreen3}
@@ -69,6 +71,7 @@ export default function ProjectJovem() {
               layout="responsive"
               objectFit="cover"
               objectPosition="top left"
+              placeholder="blur"
             />
             <Image
               src={jovemScreen4}
@@ -77,6 +80,7 @@ export default function ProjectJovem() {
               layout="responsive"
               objectFit="cover"
               objectPosition="top left"
+              placeholder="blur"
             />
           </div>
         </div>
@@ -105,6 +109,7 @@ export default function ProjectJovem() {
                 layout="responsive"
                 objectFit="cover"
                 objectPosition="top left"
+                placeholder="blur"
               />
               <div className={ProjectStyles.divider}></div>
               <Typography tag="h4">Cards</Typography>
@@ -115,6 +120,7 @@ export default function ProjectJovem() {
                 layout="responsive"
                 objectFit="cover"
                 objectPosition="top left"
+                placeholder="blur"
               />
             </div>
 
@@ -127,6 +133,7 @@ export default function ProjectJovem() {
                 layout="responsive"
                 objectFit="cover"
                 objectPosition="top left"
+                placeholder="blur"
               />
               <div className={ProjectStyles.divider}></div>
               <Typography tag="h4">Tetris</Typography>
@@ -137,6 +144,7 @@ export default function ProjectJovem() {
                 layout="responsive"
                 objectFit="cover"
                 objectPosition="top left"
+                placeholder="blur"
               />
             </div>
           </div>
