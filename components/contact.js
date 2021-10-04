@@ -15,7 +15,7 @@ export default function Contact() {
         />
         <LinkButton
           label="linkedin.com/in/sampaio-afn/"
-          link="mailto:sampaio.afn@gmail.com"
+          link="https://www.linkedin.com/in/sampaio-afn/"
           shape="slimMD"
           color="transparentPrimary"
         />
